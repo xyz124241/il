@@ -1,0 +1,21 @@
+# Entfernt gesperrte Items zusaetzlich aus Spieler-Inventaren und Endertruhen (alle 2 Sekunden).
+# false = bereits vorhandene Items bleiben, es kommen nur keine neuen dazu.
+remove-from-inventories: false
+
+# Items mit eigenen Daten (z.B. ACI-Items, die Sense) werden NIE gesperrt, auch wenn das
+# Material gesperrt ist (z.B. wenn du AMETHYST_SHARD sperrst, bleiben ACI-Kristalle erhalten).
+protect-custom-items: true
+
+sense:
+  recipe-enabled: true          # Craft: Netherite-Axt + Netherite-Schwert + Mace + Nether Star (formlos)
+  use-custom-model: true        # item_model "sensepack:sense" (braucht das Resourcepack)
+  smash-multiplier: 1.0         # Mace-Fallschaden-Bonus: 1.0 = wie die echte Mace
+  shield-cooldown-ticks: 100    # Schild-Sperre nach Treffer (100 = 5 Sek., wie Axt)
+  smash-knockback: true         # Rueckstoss fuer Mobs in der Naehe beim Smash
+
+# Optional: Resourcepack automatisch senden (direkter Download-Link auf die ZIP)
+resource-pack:
+  send-on-join: false
+  url: ""
+  sha1: ""
+  prompt: "&7Bitte das Sense-Resourcepack laden!"
